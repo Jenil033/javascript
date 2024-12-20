@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+
+    </style>
+  </head>
+  <body>
+    <h1 id="head"></h1>
+    <button id="back">Back</button>
+    <button id="next">Next</button>
+    <script>
+      let data = [
+         "https://m.media-amazon.com/images/I/712H0KWEMzL._SX522_.jpg",
+         "https://st3.depositphotos.com/3687485/12610/v/950/depositphotos_126107000-stock-illustration-superhero-kid-boy-cartoon-vector.jpg",
+      ];
+      let count = 0;
+
+      function show() {
+        let heading = document.getElementById("head");
+        heading.textContent = data[count];
+      }
+
+      let nextBtn = document.getElementById("next");
+      nextBtn.addEventListener("click", () => {
+       if(count == data.length-1){
+        count = 0;
+       }
+        count++;
+        show();
+      });
+
+
+      show()
+    </script>
+  </body>
+</html>

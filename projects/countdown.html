@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        background-color: bisque;
+
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .counter{
+        font-size: 150px;
+        font-weight: bold;
+        color: rgb(61, 23, 23);
+    }
+    .active{
+        animation-name: scale;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="counter">1</div>
+</body>
+<script>
+    let counter = document.querySelector(".counter");
+    let counts= 6;
+    let interval = setInterval(() => {
+      counts--;
+        if(counts == 1){
+            clearInterval(interval);
+        }
+        counter.innerHTML = counts;
+    }, 1000);
+
+</script>
+</html>
